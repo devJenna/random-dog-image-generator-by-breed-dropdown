@@ -37,20 +37,32 @@ function createBreedList(breedList) {
     console.log(options);
     // console.log(options.length); // 95
 
-    for (let i = 0; i < options.length; i++) {
-        // console.log(breedOption.innerHTML);
+    // using forEach
+    options.forEach((item) => {
+        // breedOption.innerHTML += `<option value="${item}">${item}</option>`;
 
-        const option = options[i];
+        // another way to create the list
         const optionElement = document.createElement("option");
-        optionElement.innerHTML = option;
-        optionElement.value = option;
+        optionElement.innerHTML = item;
+        optionElement.value = item;
         breedOption.appendChild(optionElement);
+    })
 
-        // // another way to create the list
-        // console.log(breedOption);
-        // breedOption.innerHTML += `<option value="${options[i]}">${options[i]}</option>`;
+    // // using for loop
+    // for (let i = 0; i < options.length; i++) {
+    //     // console.log(breedOption.innerHTML);
 
-    }
+    //     const option = options[i];
+    //     const optionElement = document.createElement("option");
+    //     optionElement.innerHTML = option;
+    //     optionElement.value = option;
+    //     breedOption.appendChild(optionElement);
+
+    //     // // another way to create the list
+    //     // console.log(breedOption);
+    //     // breedOption.innerHTML += `<option value="${options[i]}">${options[i]}</option>`;
+
+    // }
 
 }
 
